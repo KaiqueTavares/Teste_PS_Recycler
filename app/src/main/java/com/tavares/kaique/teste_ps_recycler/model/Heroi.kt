@@ -10,17 +10,23 @@ import android.os.Parcelable
 data class Heroi (
         val titulo : String,
         val resourceId: Int,
-        val descricao: String):Parcelable {
+        val descricao: String,
+        val forca: Int,
+        val velocidade: Int):Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readInt(),
-            parcel.readString()) {
+            parcel.readString(),
+            parcel.readInt(),
+            parcel.readInt()) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(titulo)
         parcel.writeInt(resourceId)
         parcel.writeString(descricao)
+        parcel.writeInt(forca)
+        parcel.writeInt(velocidade)
     }
 
     override fun describeContents(): Int {

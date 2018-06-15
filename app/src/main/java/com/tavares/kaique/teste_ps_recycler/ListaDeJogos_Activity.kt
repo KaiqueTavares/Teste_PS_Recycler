@@ -27,7 +27,8 @@ class ListaDeJogos_Activity : AppCompatActivity() {
         return  listOf(
                 Heroi(getString(R.string.ironManHeader),
                         R.drawable.iron_man_header,
-                        getString(R.string.descriptionIronMan))
+                        getString(R.string.descriptionIronMan),
+                        3,6)
         )
     }
 }
